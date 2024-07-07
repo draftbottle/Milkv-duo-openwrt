@@ -5,3 +5,8 @@
 可以在menuconfig中勾选apk包管理器,此包管理器经测试可用。可以切换为国内镜像源,使用时会出现报错UNTRUSTED signature，可添加--allow-untrusted参数临时解决.😋
 常用的解决方法，官方源输入:apk add -X https://dl-cdn.alpinelinux.org/alpine/latest-stable/main -u alpine-keys  --allow-untrusted
 清华源输入:apk add -X https://mirrors.tuna.tsinghua.edu.cn/alpine/latest-stable/main -u alpine-keys  --allow-untrusted
+
+If you are not within China, you can use official-image-site:
+```
+sed -i 's/mirrors.tuna.tsinghua.edu.cn/dl-cdn.alpinelinux.org/g' /etc/apk/repositories
+```
